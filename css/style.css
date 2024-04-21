@@ -2,27 +2,56 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Quan', sans-serif; /* 使用自定义字体 */
-    background: url('../imgs/bg_woods1.jpg') left center fixed; /* 设置背景动图 */
+    background: url('../imgs/bg_tailer1.gif') center center fixed; /* 设置背景动图 */
     background-size: cover;
 }
 
 .navbar {
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
+    background-color: #ffffff; /* 导航栏背景色 */
+    color: #484848; /* 文字颜色 */
+    height: 40px;
 }
 
-.navbar a {
-    margin-right: 20px;
-    color: black;
+.logo {
+    width: 50px; /* logo 图片宽度 */
+    height: auto; /* 自适应高度 */
+    margin-right: 5px; /* 图片右边距 */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+.logo-text {
+    font-size: 18px; /* 文字大小 */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 20px; /* 导航项右边距 */
+}
+
+.nav-links a {
+    color: #484848;
     text-decoration: none;
 }
 
-.navbar a:hover {
-    color: gray;
+.nav-links a:hover {
+    text-decoration: underline;
 }
+
+
 
 .main-content {
     margin: 5%;
@@ -32,14 +61,13 @@ body {
 }
 
 .title {
-    color: rgb(255, 255, 255);
+    color: #484848;
     font-size: 48px;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: white;
+    color: #484848;
     font-size: 18px;
     margin-bottom: 20px;
 }
