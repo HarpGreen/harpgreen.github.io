@@ -18,31 +18,62 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="sidebar">
         <div class="logo-container">
             <img src="imgs/logo.png" alt="Logo" class="logo">
             <span class="logo-text">原点城</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="map/unmined.index.html">卫星地图</a></li>
-            <li><a href="files/原点城服务器手册v1_3.pdf">服务器手册</a></li>
-            <li><a href="https://www.bilibili.com/video/BV1Z94y1i7RE">宣传片</a></li>
-        </ul>
     </div>
-
+    <div class="mainbar">
+        <div class="mainbar-container">
+            <div class="title">永不换档的纯净<br>生存服</div>
+            <div class="subtitle">从2022年维护至今的永久建筑区，不怕跑路，放心开肝！</div>
+            <div class="twobutton-container">
+                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FijWVpvqJV2dUD3cWMB75jsRn_e_TXrX&authKey=Jvzy6fwder1lbwaJwKIYPe4xiZdu8up07a6uIaAxGw%2BMdPcOU%2FmQR36cLUjOOl%2B9&noverify=0&group_code=671868088" class="btn">加入我们</a>
+                <a href="files/原点城服务器手册v1_3.pdf" class="iconbutton" title="查看服务器手册"></a>
+            </div>
+            
+            <div class="text">消息互通/反作弊/聊天称号/原创插件/死亡掉落</div>
+            <div class="scroll-box" id="scrollBox">
+                <div class="scroll-item active" style="background-image: url('scrollbox/中心岛广场.jpg');">
+                    <p class="scroll-text">中心岛广场</p>
+                </div>
+                <div class="scroll-item" style="background-image: url('scrollbox/菠萝地瓜广场.png');">
+                    <p class="scroll-text">菠萝地瓜</p>
+                </div>
+                <div class="scroll-item" style="background-image: url('scrollbox/雨菇教堂.jpg');">
+                    <p class="scroll-text">雨菇教堂</p>
+                </div>
+            </div>
+        </div>  
+    </div>
     <div class="main-content">
-        <div class="title">永不换档的纯净生存服</div>
-        <div class="subtitle">从2022年维护至今的永久建筑区，不怕跑路，放心开肝！</div>
         <div class="video">
-            <iframe src="https://player.bilibili.com/player.html?aid=361129687&bvid=BV1Z94y1i7RE&cid=1202318984&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%"> </iframe>
+            <iframe src="https://player.bilibili.com/player.html?aid=1800036186&bvid=BV1nt421W7jk&cid=1428974928&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%"> </iframe>
         </div>
-        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FijWVpvqJV2dUD3cWMB75jsRn_e_TXrX&authKey=Jvzy6fwder1lbwaJwKIYPe4xiZdu8up07a6uIaAxGw%2BMdPcOU%2FmQR36cLUjOOl%2B9&noverify=0&group_code=671868088" class="btn">加入我们</a>
     </div>
 
+    <div class="mapbar">
+        <div class="map-container">
+            <div class="map-title">卫星地图</div>
+            <div class="map-subtitle">不定期更新的建筑区地图</div>
+            <a href="map/unmined.index.html" class="map-btn">点击查看</a>
+        </div>
+        <img src="imgs/mc_map.png" class="map-icon">
+    </div>
     <div class="footer">
         Page designed by SkilfulScarab84 HarpGreen © 2024 OriginCity Server
     </div>
+    <script>
+        let currentItem = 0;
+        const items = document.querySelectorAll('.scroll-item');
 
+        setInterval(() => {
+            items[currentItem].classList.remove('active');
+            currentItem = (currentItem + 1) % items.length;
+            items[currentItem].classList.add('active');
+        }, 5000); // x秒切换一次
+    </script>
     <script>
         // 在这里添加 JavaScript 代码以检测设备类型并重定向到相应的页面
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
