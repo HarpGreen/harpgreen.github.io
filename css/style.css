@@ -59,7 +59,7 @@ body {
 .mainbar-container {
     display: flex;
     flex-direction: column;
-    margin: 70px 30px 70px 50px;
+    margin: 70px 50px 30px 40px;
 }
 
 .title {
@@ -71,15 +71,15 @@ body {
 
 .subtitle {
     color: #484848;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 22px;
     margin-bottom: 20px;
 }
 
 .text {
     color: #484848;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     margin-bottom: 20px;
 }
 .twobutton-container {
@@ -148,10 +148,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 12px;
+    padding: 10px 30px;
     background-color: rgba(0, 0, 0, 0.7); /* 背景色 */
-    color: white; /* 文字颜色 */
-    text-align: center; /* 文字居中 */
+    color: rgb(245, 245, 245); /* 文字颜色 */
+    text-align: left; /* 文字居中 */
 }
 
 /* 左侧视频大区域 */
@@ -223,7 +223,7 @@ body {
 
 /* 网站脚注 */
 .footer {
-    color: rgb(60, 60, 60);
+    color: rgb(161, 161, 161);
     text-align: right;
     padding: 3px 0;
     position: fixed;
