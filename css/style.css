@@ -185,7 +185,7 @@ body {
 .map-container {
     display: flex;
     flex-direction: column;
-    margin: 18px 8%;
+    margin: 14px 8%;
 }
 .map-title {
     color: #525252;
