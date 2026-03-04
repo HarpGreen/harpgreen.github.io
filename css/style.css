@@ -199,6 +199,13 @@ body {
     line-height: 15px;
     margin-bottom: 6px;
 }
+
+.map-twobutton-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .map-btn {
     background-image: url(../imgs/button2.png);
     background-size: cover;
@@ -213,6 +220,16 @@ body {
     width: 80px;
     height: 24px;
 }
+
+.map-download-btn {
+    background-image: url(../imgs/icon_download_blue.png);
+    background-size: cover;
+    padding: 10px 20px;
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
 .map-icon {
     position: absolute;
     top: 8px;
