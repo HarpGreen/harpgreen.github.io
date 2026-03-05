@@ -3,8 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Quan', sans-serif; /* 使用自定义字体 */
-    background: url('../imgs/bg_cherry1.gif') center center fixed; /* 设置背景动图 */
+    background: 
+        url('../imgs/bg_cherry1.gif') center center fixed, 
+        url('../imgs/bg_cherry1.jpg') center center fixed; /* 设置背景动图 */
     background-size: cover;
+    background-size: cover, cover;
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-color: #f1abf5;
     height: 100%;
 }
 
