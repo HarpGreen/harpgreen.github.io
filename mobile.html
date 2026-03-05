@@ -36,6 +36,17 @@
         <a href="files/原点城服务器手册v1_3.pdf">服务器手册</a>
         <a href="https://www.bilibili.com/video/BV1Z94y1i7RE">宣传片</a>
         <a href="https://picui.ogmua.cn/s1/2026/02/27/69a158dd99f6b.webp">赞助</a>
+        <div class="scroll-box" id="scrollBox">
+            <div class="scroll-item active" style="background-image: url('scrollbox/四周年合影.PNG');">
+                <p class="scroll-text">四周年合影</p>
+            </div>
+            <div class="scroll-item" style="background-image: url('scrollbox/菠萝地瓜广场.png');">
+                <p class="scroll-text">菠萝地瓜</p>
+            </div>
+            <div class="scroll-item" style="background-image: url('scrollbox/IMG_7215.PNG');">
+                <p class="scroll-text">黑岩观景亭</p>
+            </div>
+        </div>
     </div>
     <div class="main">
         <div class="title">永不换档的纯净<br>生存服</div>
@@ -55,6 +66,16 @@
             var sidebar = document.getElementById("sidebar");
             sidebar.classList.toggle("show");
         }
+    </script>
+    <script>
+        let currentItem = 0;
+        const items = document.querySelectorAll('.scroll-item');
+
+        setInterval(() => {
+            items[currentItem].classList.remove('active');
+            currentItem = (currentItem + 1) % items.length;
+            items[currentItem].classList.add('active');
+        }, 5000); // x秒切换一次
     </script>
 </body>
 

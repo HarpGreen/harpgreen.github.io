@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Quan', sans-serif; /* 使用自定义字体 */
-    background: url('../imgs/bg_cherry.gif') center center fixed; /* 设置背景动图 */
+    background: url('../imgs/bg_cherry1.gif') center center fixed; /* 设置背景动图 */
     background-size: cover;
     height: 100%;
 }
@@ -74,6 +74,12 @@ body {
     transition: 0.3s;
     z-index: 1000;
 }
+/* 
+.sidebar-option-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+} */
 
 .sidebar a {
     padding: 10px 15px;
@@ -90,6 +96,52 @@ body {
 
 .show {
     right: 0px;
+}
+
+/* 滚动框 */
+.scroll-box {
+    margin: 20px 20px;
+    margin-top: 40px;
+    width: 240px;
+    height: 150px; /* 窗口高度 */
+    background-color: #555; /* 窗口背景色 */
+    border-radius: 30px; /* 窗口圆角 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    position: relative; /* 相对定位，用于定位文字 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    bottom: 0;
+}
+
+.scroll-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s; /* 图片切换动画 */
+    background-size: cover; /* 背景图片尺寸调整为容器大小 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    background-position: center; /* 背景图片居中 */
+    opacity: 0;
+}
+
+.scroll-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.scroll-text {
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景色 */
+    color: rgb(245, 245, 245); /* 文字颜色 */
+    text-align: left; /* 文字居中 */
 }
 
 /* 导航栏下横线 */
